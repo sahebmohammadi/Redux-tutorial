@@ -15,10 +15,10 @@ function buyCake() {
     type: BUY_CAKE,
   };
 }
-function buyIcecream() {
+function buyIcecream(value) {
   return {
     type: BUY_ICECREAM,
-    value: 5,
+    value: value,
   };
 }
 //? REDUCER : (prevState,action)=> newState
@@ -61,7 +61,7 @@ const store = createStore(rootReducer, applyMiddleWare(logger));
 //? DISPATCHING AN ACTION :
 const unsubscribe = store.subscribe(() => console.log(store.getState()));
 store.dispatch(buyCake());
-store.dispatch(buyIcecream());
+store.dispatch(buyIcecream(4));
 
 //? SUBSCRIPTION :
 unsubscribe();
