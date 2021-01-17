@@ -1,12 +1,12 @@
 import { connect } from "react-redux";
-import { buyCake } from "../../redux";
+import { buyCake, buyIceCream } from "../../redux";
 import { useState } from "react";
 
-const CakeWithPayload = ({ item, buyCake }) => {
+const CakeWithPayload = ({ item, buyItem }) => {
   return (
     <div>
       <h2> Item - {item}</h2>
-      {/* <button onClick={() => buyCake(cake)}>Buy {cake} Cake</button> */}
+      <button onClick={buyItem}>Buy Item</button>
     </div>
   );
 };
@@ -25,12 +25,15 @@ const mapStatToProps = (state, ownProps) => {
   };
 };
 
-const mapDispatchToProps = (dispatch) => {
+const mapDispatchToProps = (dispatch, ownProps) => {
+  const dispatchFunction = ownProps.cake
+    ? () => dispatch(buyCake())
+    : () => dispatch(buyIceCream());
   return {
-    buyCake: (cake) => dispatch(buyCake(cake)),
+    buyItem: dispatchFunction,
   };
 };
 
 //? the common use case is when you click on the particular item you pass
 //? the Id as props and then fetch the data from redux for that producnt
-export default connect(mapStatToProps)(CakeWithPayload);
+export default connect(mapStatToProps, mapDispatchToProps)(CakeWithPayload);
