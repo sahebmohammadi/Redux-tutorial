@@ -1,5 +1,6 @@
 import { connect } from "react-redux";
-import buyCake from "../../redux/cake/cakeActions";
+import { buyCake } from "../../redux";
+
 const CakeContainer = (props) => {
   return (
     <div>
@@ -12,7 +13,7 @@ const CakeContainer = (props) => {
 //? get redux state as prameter :
 const mapStatToProps = (state) => {
   return {
-    numberOfCakes: state.numberOfCakes,
+    numberOfCakes: state.cake.numberOfCakes,
   };
 };
 
