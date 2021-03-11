@@ -8,20 +8,23 @@ import CakeWithPaylod from "./components/CakeWtihPayload/CakeWtihPayload";
 import ItemContainer from "./components/ItemContainer/ItemContainer";
 import UserContainer from "./components/USerContainer/UserContainer";
 
+
 function App() {
   return (
     <Provider store={store}>
       <div className="App">
         <UserContainer />
         <CakeContainer />
-        <HooksCakeContainer />
-        <BuyIceCream />
-        <CakeWithPaylod />
-        <ItemContainer cake />
-        <ItemContainer />
+        {/* <HooksCakeContainer /> */}
+        {/* <BuyIceCream /> */}
+        {/* <CakeWithPaylod /> */}
+        {/* <ItemContainer cake /> */}
+        {/* <ItemContainer /> */}
       </div>
     </Provider>
   );
 }
 
 export default App;
+
+// export const data = {...}

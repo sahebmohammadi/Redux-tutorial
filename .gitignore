@@ -4,7 +4,20 @@
 /node_modules
 /.pnp
 .pnp.js
-
+/src/components/AxiosLecture
+/src/components/Formik
+/src/components/LoginForm
+/src/components/SignUpForm
+/src/components/containers
+/src/components/hooksLecture
+/src/components/Table
+/src/common
+/src/utils
+/src/hoc
+/src/services
+/src/hooks
+/axios.js
+/src/config.json
 # testing
 /coverage
 

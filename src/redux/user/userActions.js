@@ -35,6 +35,7 @@ export const fetchUsers = () => {
       .then((response) => {
         // const users = response.data.map((user) => user.name);
         dispatch(fetchUsersSuccess(response.data));
+        // dispatch({type:FETCH_USERS_SUCCESS,payload:response.data});
       })
       .catch((error) => {
         dispatch(fetchUsersFailure(error.message));
