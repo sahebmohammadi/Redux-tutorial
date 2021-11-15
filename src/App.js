@@ -7,14 +7,15 @@ import BuyIceCream from "./components/BuyIceCream/BuyIceCream";
 import CakeWithPaylod from "./components/CakeWtihPayload/CakeWtihPayload";
 import ItemContainer from "./components/ItemContainer/ItemContainer";
 import UserContainer from "./components/USerContainer/UserContainer";
-
+import PostSaga from "./components/postSaga/postSaga";
 
 function App() {
   return (
     <Provider store={store}>
       <div className="App">
-        <UserContainer />
-        <CakeContainer />
+        <PostSaga />
+        {/* <UserContainer />
+        <CakeContainer /> */}
         {/* <HooksCakeContainer /> */}
         {/* <BuyIceCream /> */}
         {/* <CakeWithPaylod /> */}
@@ -26,5 +27,3 @@ function App() {
 }
 
 export default App;
-
-
